@@ -11,4 +11,4 @@ require 'date'
 #TODO - consider wine apis that could be used to enhance application
 #require rest-client
 
-wine1 = Wine.create({winery: 'Cupcake', varietal: 'Chardonnay', price: 9.00, review: 'average. nothing special', purchase_date: DateTime.new(2020,10,12), rating: 7})
+wine1 = Wine.create({winery: 'Cupcake', varietal: 'Chardonnay', price: 9.00, review: 'nothing special', purchase_date: DateTime.new(2020,10,12), rating: 7})
