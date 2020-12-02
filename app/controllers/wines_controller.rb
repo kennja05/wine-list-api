@@ -10,4 +10,25 @@ class WinesController < ApplicationController
         render json: wine
     end
 
+    def create
+        byebug
+        wine = Wine.new(wineParams)
+        if wine.save
+            render json: wine
+        else
+            byebug
+        end
+    end
+
+    def destroy
+        byebug
+        Wine.destroy(params['id'])
+    end
+
+    private
+
+    def wineParams
+        params.require(:wine).permit(:winery, :varietal, :rating, :price, :purchase_date, :review)
+    end
+
 end
