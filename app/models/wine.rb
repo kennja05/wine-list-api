@@ -1,5 +1,5 @@
 class Wine < ApplicationRecord
-
+    belongs_to: varietal
     validates :winery, :rating, :review, :varietal, :price, presence: true
     
     validates_length_of :review, minimum: 5, maximum: 150, :too_short => "Please include a short review", :too_long => "Exceeded max character length of 150"
