@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_222349) do
+ActiveRecord::Schema.define(version: 2021_01_05_194707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2020_12_01_222349) do
     t.integer "rating"
     t.float "price"
     t.text "review"
-    t.datetime "purchase_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "varietal"
