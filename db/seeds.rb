@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Wine.destroy_all
-require 'date'
-
+Varietal.destroy_all
 #TODO - consider wine apis that could be used to enhance application
 #require rest-client
 
