@@ -11,10 +11,14 @@ class WinesController < ApplicationController
     end
 
     def create
-        byebug
+        varietal = Varietal.find_by(name: params['varietal'])
+        if !varietal
+            varietal = Varietal.new(name: params['varietal'])
+        end
         wine = Wine.new(wineParams)
+        wine.varietal = varietal
         if wine.save
-            render json: wine
+            render json: wine, include: :varietal
         else
             byebug
         end
